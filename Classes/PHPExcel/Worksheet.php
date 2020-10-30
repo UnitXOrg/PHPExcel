@@ -2346,7 +2346,7 @@ class PHPExcel_Worksheet implements PHPExcel_IComparable
         $pCoordinate = strtoupper($pCoordinate);
 
         // Convert 'A' to 'A:A'
-        $pCoordinate = preg_replace('/^([A-Z]+)$/', '${1}:${1}', $pCoordinate);
+        $pCoordinate = preg_replace('/^([A-Z]+)$/', '$[0]:$[0]', $pCoordinate);
 
         // Convert '1' to '1:1'
         $pCoordinate = preg_replace('/^([0-9]+)$/', '${1}:${1}', $pCoordinate);
